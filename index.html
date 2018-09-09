@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+
+    <meta charset="UTF-8">
+    <title> JavaScript, My Paint !</title>
+    <link rel="stylesheet" type="text/css" src="style.css"/>
+
+</head>
+
+<body>
+
+    <style type="text/css">
+    
+    input
+    {
+
+        background-color: #bbb;
+        padding: .5em;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 6px;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+
+
+
+
+    }
+
+    input:hover
+    {
+       
+        border: none;
+        background: rgba(255, 125, 61, 0.5);;
+        box-shadow: 0px 0px 1px #777; 
+        cursor: pointer;
+
+    }
+
+    button
+    {
+        background-color: #bbb;
+        padding: .5em;
+        -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 500px;
+      color: #fff;
+      font-family: 'Oswald';
+      font-size: 20px;
+      text-decoration: none;
+      border: none;
+
+    }
+
+    button:hover
+    {
+        border: none;
+        background: rgba(255, 125, 61, 0.5);
+        box-shadow: 0px 0px 1px #777;
+        cursor: pointer; 
+    }
+
+    body
+    {
+        background-image: url(rainbows.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #canvas{
+        border-radius: 75px;
+        border: 2px solid;
+        border-width: 9px;
+        border-color: #77797c;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    .button-tools
+    {
+        margin-right: 15px;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        float: right;
+        padding: 10px;
+       
+
+    }
+
+    .tool
+    {
+        float: right;
+        margin: 4px;
+    }
+
+    #clear
+    {
+        margin-left: 50px;
+        margin-top: 15px;
+
+    }
+
+</style>
+    
+    <div class="button-tools">
+        
+        <button class="size tool" id="small" value="Small" type="button">Small</button>
+        <button class="size tool" id="normal" value="Normal" type="button">Normal</button>
+        <button class="size tool" id="large" value="Large" type="button">Large</button>
+        <button class="size tool" id="huge" value="Huge" type="button">Huge</button>
+        <button class="tool tool" id="crayon" value="crayon" type="button">Pen</button>
+        <button class="tool tool" id="eraser" value="eraser" type="button">Eraser</button>
+        <button class="tool" id="line" value="line" type="button">Line</button>
+        <button class="tool" id="export" value="export" type="button">Export File</button>
+        <input class="tool" type="color" id="color">
+    </div>
+
+
+    <div id="canvasDiv">
+
+    </div>  
+    <button id="clear">Clear</button>
+
+    <script type="text/javascript"> $(document).ready(function(){
+        prepareCanvas();
+    });
+    </script>
+    <script src="script.js"></script>
+    
+    
+
+</body>
+</html>
